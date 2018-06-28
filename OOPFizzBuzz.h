@@ -19,6 +19,8 @@ public:
 	std::string print (int num);
 
 	void play (int max);
+
+	void loadFromFile (const std::string &filename);
 };
 
 

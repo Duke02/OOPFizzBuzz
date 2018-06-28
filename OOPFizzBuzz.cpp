@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iostream>
+#include <fstream>
 #include "OOPFizzBuzz.h"
 
 OOPFizzBuzz::OOPFizzBuzz ( ) = default;
@@ -40,4 +41,23 @@ void OOPFizzBuzz::play (int max) {
 	for ( int i = 1; i <= max; i++ ) {
 		std::cout << this->print( i ) << std::endl;
 	}
+}
+
+void OOPFizzBuzz::loadFromFile (const std::string &filename) {
+	std::ifstream input( filename );
+
+	if ( !input.good() ) {
+		std::cerr << "Error opening file!" << std::endl;
+		return;
+	}
+
+	std::string value;
+	int         key;
+	while ( input ) {
+		input >> key;
+		input >> value;
+		this->add( key, value );
+	}
+
+	input.close();
 }
