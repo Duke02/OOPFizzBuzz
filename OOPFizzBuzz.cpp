@@ -6,7 +6,7 @@ OOPFizzBuzz::OOPFizzBuzz ( ) = default;
 
 OOPFizzBuzz::OOPFizzBuzz (const OOPFizzBuzz &cp) {
 	for ( auto i = cp.map.begin(); i != cp.map.end(); i++ ) {
-		this->map.insert( i );
+		this->map[ i->first ] = i->second;
 	}
 }
 
@@ -15,7 +15,7 @@ void OOPFizzBuzz::add (int key, std::string value) {
 }
 
 bool OOPFizzBuzz::remove (int key) {
-	if ( std::find( this->map.begin(), this->map.end(), key ) == this->map.end() ) {
+	if ( this->map.find( key ) == this->map.end() ) {
 		// Can't find the key that we want to remove
 		return false;
 	}
