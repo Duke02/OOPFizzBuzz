@@ -1,6 +1,10 @@
 #include <iostream>
 #include "OOPFizzBuzz.h"
 
+void barrier ( ) {
+	std::cout << "======================================" << std::endl;
+}
+
 int main ( ) {
 
 	OOPFizzBuzz fizzBuzz;
@@ -11,13 +15,21 @@ int main ( ) {
 
 	fizzBuzz.play( 30 );
 
-	std::cout << "======================================" << std::endl;
+	barrier();
 
 	// Now for some fun!
 	fizzBuzz.add( 10, "Oh" );
 	fizzBuzz.add( 15, "Boy" );
 
 	fizzBuzz.play( 60 );
+
+	barrier();
+
+	fizzBuzz.clear();
+
+	fizzBuzz.loadFromFile( "dog.txt" );
+
+	fizzBuzz.play( 210 );
 
 	return 0;
 }
