@@ -35,3 +35,9 @@ std::string OOPFizzBuzz::print (int num) {
 	}
 	return std::to_string( num );
 }
+
+void OOPFizzBuzz::play (int max) {
+	for ( int i = 1; i <= max; i++ ) {
+		std::cout << this->print( i ) << std::endl;
+	}
+}

@@ -17,6 +17,8 @@ public:
 	bool remove (int key);
 
 	std::string print (int num);
+
+	void play (int max);
 };
 
 

@@ -9,9 +9,7 @@ int main ( ) {
 	fizzBuzz.add( 3, "Fizz" );
 	fizzBuzz.add( 5, "Buzz" );
 
-	for ( int i = 1; i <= 30; i++ ) {
-		std::cout << fizzBuzz.print( i ) << std::endl;
-	}
+	fizzBuzz.play( 30 );
 
 	std::cout << "======================================" << std::endl;
 
@@ -19,10 +17,7 @@ int main ( ) {
 	fizzBuzz.add( 10, "Oh" );
 	fizzBuzz.add( 15, "Boy" );
 
-	// Original game of FizzBuzz.
-	for ( int i = 1; i <= 60; i++ ) {
-		std::cout << fizzBuzz.print( i ) << std::endl;
-	}
+	fizzBuzz.play( 60 );
 
 	return 0;
 }
