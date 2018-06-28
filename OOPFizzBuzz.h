@@ -21,6 +21,8 @@ public:
 	void play (int max);
 
 	void loadFromFile (const std::string &filename);
+
+	void clear ( );
 };
 
 

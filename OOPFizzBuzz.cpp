@@ -61,3 +61,7 @@ void OOPFizzBuzz::loadFromFile (const std::string &filename) {
 
 	input.close();
 }
+
+void OOPFizzBuzz::clear ( ) {
+	this->map.clear();
+}
