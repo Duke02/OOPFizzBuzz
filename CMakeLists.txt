@@ -3,4 +3,4 @@ project ( OOPFizzBuzz )
 
 set ( CMAKE_CXX_STANDARD 11 )
 
-add_executable ( OOPFizzBuzz main.cpp )
+add_executable ( OOPFizzBuzz main.cpp OOPFizzBuzz.cpp OOPFizzBuzz.h )
